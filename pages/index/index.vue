@@ -1,13 +1,18 @@
 <template>
 	<view class="content">
 		<view class="head">
-			<uni-data-select class="head_select" v-model="selectNum" :localdata="range" @change="changeSelect">
+			<uni-data-select class="head_select" :clear="false" v-model="selectNum" :localdata="range"
+				@change="changeSelect">
 			</uni-data-select>
-			<view class="">好物分享</view>
-			<u-search placeholder="输入搜索" v-model="keyword" shape="round" :clearabled="true" actionText="搜素"
-				custom='searchList'></u-search>
-			<u-button type="primary" text="设为首页"></u-button>
-			<u-button type="primary" text="收藏本站"></u-button>
+			<view class="head_title">好物分享</view>
+			<u-search placeholder="" v-model="keyword" shape="round" actionText="搜索" custom='searchList'></u-search>
+			<u-button class="head_btn" type="primary" text="首页"></u-button>
+			<u-button class="head_btn" type="primary" text="收藏" style="margin-left: 10rpx;"></u-button>
+		</view>
+		<view class="body">
+			<Image-card></Image-card>
+			<Image-card></Image-card>
+			<Image-card></Image-card>
 		</view>
 	</view>
 </template>
@@ -47,14 +52,46 @@
 	}
 </script>
 <style lang="scss">
-	.head {
-		height: 70rpx;
+	.content {
+		background-color: #ffffff;
+		height: 100%;
+		padding-top: var(--status-bar-height);
 		display: flex;
-		background-color: antiquewhite;
+		flex-direction: column;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
 
-		&_select {
-			width: 132rpx;
-			height: 100%;
+		.head {
+			height: 80rpx;
+			display: grid;
+			margin: 0 10rpx;
+			align-items: center;
+			grid-template-columns: 132rpx 128rpx auto 90rpx 90rpx;
+
+			&_select {
+				width: 132rpx;
+				height: 100%;
+			}
+
+			&_title {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 25rpx;
+			}
+
+			&_btn {
+				width: 100%;
+				height: 80%;
+			}
 		}
-	}
+
+		.body {
+			height: calc(100%;
+					overflow: auto;
+			}
+		}
 </style>
