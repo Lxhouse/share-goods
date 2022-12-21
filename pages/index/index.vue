@@ -11,7 +11,7 @@
 		</view>
 		<view class="body">
 			<Image-card :imgList="['/static/img/WechatIMG1815.jpeg']"></Image-card>
-			<Image-card  :imgList="['/static/img/WechatIMG1814.jpeg','/static/img/WechatIMG1813.jpeg']"></Image-card>
+			<Image-card :imgList="['/static/img/WechatIMG1814.jpeg','/static/img/WechatIMG1813.jpeg']"></Image-card>
 			<Image-card :imgList="['/static/img/WechatIMG1815.jpeg','/static/img/WechatIMG1814.jpeg']"></Image-card>
 		</view>
 	</view>
@@ -56,6 +56,8 @@
 		background-color: #F8F8FF;
 		height: 100%;
 		padding-top: var(--status-bar-height);
+		padding-left: 20rpx;
+		margin-right: 20rpx;
 		display: flex;
 		flex-direction: column;
 		position: absolute;
@@ -90,8 +92,8 @@
 		}
 
 		.body {
-			height: calc(100%;
-					overflow: auto;
-			}
+			height: 100%;
+			overflow: auto;
 		}
+	}
 </style>
