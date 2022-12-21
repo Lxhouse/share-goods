@@ -10,9 +10,9 @@
 			<u-button class="head_btn" type="primary" text="收藏" style="margin-left: 10rpx;"></u-button>
 		</view>
 		<view class="body">
-			<Image-card></Image-card>
-			<Image-card></Image-card>
-			<Image-card></Image-card>
+			<Image-card :imgList="['/static/img/WechatIMG1815.jpeg']"></Image-card>
+			<Image-card  :imgList="['/static/img/WechatIMG1814.jpeg','/static/img/WechatIMG1813.jpeg']"></Image-card>
+			<Image-card :imgList="['/static/img/WechatIMG1815.jpeg','/static/img/WechatIMG1814.jpeg']"></Image-card>
 		</view>
 	</view>
 </template>

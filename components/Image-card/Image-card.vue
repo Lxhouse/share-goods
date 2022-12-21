@@ -1,9 +1,8 @@
 <template>
 	<view class="card_body">
 		<view class="card_body_card">
-			<image class="card_body_card__img" src="@/static/img/WechatIMG1815.jpeg" mode="aspectFit"></image>
-			<image class="card_body_card__img" src="@/static/img/WechatIMG1813.jpeg" mode="aspectFit"></image>
-			<image class="card_body_card__img" src="@/static/img/WechatIMG1814.jpeg" mode="aspectFit"></image>
+			<image v-for="itemImg in imgList" class="card_body_card__img" :src="itemImg" mode="scaleToFill"></image>
+	
 			<view class="card_body_card__bottom">
 				<image :src="actionList.isLike===0?iconList[0].no:iconList[0].yes" mode="aspectFit"
 					style="width: 70rpx;height: 70rpx;" @click="changeStatus('like')"></image>
@@ -23,6 +22,7 @@
 <script>
 	export default {
 		name: "Image-card",
+		props:["imgList"],
 		data() {
 			return {
 				actionList: {
@@ -79,7 +79,7 @@
 		&_card {
 			position: relative;
 			height: fit-content;
-			background-color: antiquewhite;
+		background-color: azure;
 
 			&__img {
 				height: 500rpx;
