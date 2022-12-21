@@ -53,7 +53,7 @@
 </script>
 <style lang="scss">
 	.content {
-		background-color: #ffffff;
+		background-color: #F8F8FF;
 		height: 100%;
 		padding-top: var(--status-bar-height);
 		display: flex;
@@ -69,10 +69,10 @@
 			display: grid;
 			margin: 0 10rpx;
 			align-items: center;
-			grid-template-columns: 132rpx 128rpx auto 90rpx 90rpx;
+			grid-template-columns: 138rpx 128rpx auto 90rpx 90rpx;
 
 			&_select {
-				width: 132rpx;
+				width: 138rpx;
 				height: 100%;
 			}
 

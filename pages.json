@@ -14,7 +14,16 @@
 			}
 
 		}
-	],
+	    ,{
+            "path" : "pages/manage/manage",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "管理员界面",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
@@ -30,6 +39,9 @@
 			},	{
 				"text": "性价比",
 				"pagePath": "pages/costPerformance/costPerformance"
+			},	{
+				"text": "管理员",
+				"pagePath": "pages/manage/manage"
 			}
 		]
 	},
