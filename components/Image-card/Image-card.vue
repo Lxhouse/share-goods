@@ -1,12 +1,12 @@
 <template>
 	<view class="card_body">
 		<view class="card_body_card">
-	<!-- 		<u-upload v-for="itemImg in imgList"  name="6" accept="image" imageMode='scaleToFill' width="auto" multiple :maxCount="1">
-				<image class="card_body_card__img" :src="itemImg" mode="scaleToFill"></image>
-			</u-upload> -->
-			<image  v-for="itemImg in imgList" class="card_body_card__img" :src="itemImg" mode="scaleToFill"></image>
+			<u-upload v-if="isUpload===true" v-for="itemImg in imgList"  name="6" accept="image" imageMode='scaleToFill' width="auto" multiple :maxCount="1">
+				<image class="card_body_card__img" :src="itemImg" mode="scaleToFill" style="width: calc(100vw - 40rpx);"></image>
+			</u-upload>
+			<image v-else  v-for="itemImg in imgList" class="card_body_card__img" :src="itemImg" mode="scaleToFill"></image>
 			<view v-if="showInlineBottom!==false" class="card_body_card__bottom">
-				<image :src="actionList.isLike===0?iconList[0].no:iconList[0].yes" mode="aspectFit"
+				<image :src="actionList.isLike===0?iconList[0].no:iconList[0].yes" mode="aspectFill"
 					style="width: 70rpx;height: 70rpx;" @click="changeStatus('like')"></image>
 				<view class="card_body_card_num">{{actionList.likeNum}}</view>
 				<image :src="actionList.isStep===0?iconList[1].no:iconList[1].yes" mode="aspectFit"
@@ -89,16 +89,18 @@
 <style lang="scss">
 	.card_body {
 		width: 100%;
-		margin-top: 20rpx;
+		// margin-top: 20rpx;
+	
 
 		&_card {
 			position: relative;
-			height: fit-content;
-			background-color: azure;
+
+			// height: fit-content;
 
 			&__img {
 				height: 500rpx;
 				width: 100%;
+				margin-bottom: -10rpx;
 			}
 
 			&_num {

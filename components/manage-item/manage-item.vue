@@ -6,10 +6,9 @@
 		</view>
 		<view class="body_opt2">
 			<view class="">类别：</view>
-			<uni-data-select v-model="selectValue" :localdata="selectList" @change="change"></uni-data-select>
+			<uni-data-select v-model="selectValue" :localdata="selectList" @change="changeSelect"></uni-data-select>
 			<view class="">显示：</view>
 			<u-switch v-model="show" @change="changeShow"></u-switch>
-			<u-button type="primary" text="改图"></u-button>
 			<u-button type="error" style='margin-left: 20rpx;' text="删除"></u-button>
 		</view>
 		<view class="body_opt3">
@@ -53,6 +52,9 @@
 			changeShow(e) {
 				console.log(e)
 				this.show = e
+			},
+			changeSelect(e){
+				this.selectValue=e
 			}
 		}
 	}
@@ -68,7 +70,7 @@
 	.body_opt2 {
 		height: 60rpx;
 		display: grid;
-		grid-template-columns: repeat(1, 100rpx 200rpx) 100rpx 120rpx 80rpx 80rpx;
+		grid-template-columns: repeat(1, 100rpx 240rpx) 100rpx 120rpx  auto;
 		align-items: center;
 		justify-self: center;
 	}

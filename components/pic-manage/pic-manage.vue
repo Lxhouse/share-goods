@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view style="width: 100%;">
 		<view class="body">
 		<manage-item></manage-item>
 		<manage-item></manage-item>
