@@ -68,5 +68,20 @@
     "uniStatistics" : {
         "enable" : false
     },
-    "vueVersion" : "2"
+    "vueVersion" : "2",
+    "h5" : {
+        "title" : "好物分享",
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : true
+            }
+        },
+        "router" : {
+            "mode" : "hash",
+            "base" : "./"
+        },
+        "devServer" : {
+            "https" : false
+        }
+    }
 }

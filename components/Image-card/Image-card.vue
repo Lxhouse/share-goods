@@ -4,7 +4,7 @@
 			<u-upload v-if="isUpload===true" v-for="itemImg in imgList"  name="6" accept="image" imageMode='scaleToFill' width="auto" multiple :maxCount="1">
 				<image class="card_body_card__img" :src="itemImg" mode="scaleToFill" style="width: calc(100vw - 40rpx);"></image>
 			</u-upload>
-			<image v-else  v-for="itemImg in imgList" class="card_body_card__img" :src="itemImg" mode="scaleToFill"></image>
+			<image v-else  v-for="itemImg in imgList" class="card_body_card__img" :src="itemImg" mode='aspectFit'></image>
 			<view v-if="showInlineBottom!==false" class="card_body_card__bottom">
 				<image :src="actionList.isLike===0?iconList[0].no:iconList[0].yes" mode="aspectFill"
 					style="width: 70rpx;height: 70rpx;" @click="changeStatus('like')"></image>
